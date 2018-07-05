@@ -12,7 +12,6 @@ export class BreadcrumbsComponent implements OnInit {
   constructor(private router: Router, public title: Title, public meta: Meta) { 
     this.getDataRoute()
       .subscribe(event =>{
-        console.log(event);
         this.label = event.titulo;
         this.title.setTitle(this.label);
         let metaTag: MetaDefinition ={

@@ -20,6 +20,10 @@ import { RxjsComponent } from './rxjs/rxjs.component';
 // Pipe Module
 import { PipesModule } from '../pipes/pipes.module';
 import { ProfileComponent } from './profile/profile.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
+
+
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -31,7 +35,9 @@ import { ProfileComponent } from './profile/profile.component';
     AccountSettingsComponent,
     PromesasComponent,
     RxjsComponent,
-    ProfileComponent
+    ProfileComponent,
+    UsuariosComponent,
+    ModalUploadComponent
   ],
   imports: [ CommonModule, SharedModule, PAGES_ROUTES, FormsModule, ChartsModule, PipesModule],
   exports: [

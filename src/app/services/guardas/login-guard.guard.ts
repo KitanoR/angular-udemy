@@ -8,7 +8,6 @@ export class LoginGuardGuard implements CanActivate {
   constructor(private _usuario: UsuarioService, public router: Router){};
   canActivate() {
     if( this._usuario.estaLogueado() ) {
-      console.log('PAso el guard');
       return true;
     } else {
       console.log('Bloqueado por el guard');
