@@ -22,6 +22,9 @@ import { PipesModule } from '../pipes/pipes.module';
 import { ProfileComponent } from './profile/profile.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
+import { MedicosComponent } from './medicos/medicos.component';
+import { HospitalesComponent } from './hospitales/hospitales.component';
+import { MedicoComponent } from './medico/medico.component';
 
 
 @NgModule({
@@ -37,7 +40,10 @@ import { ModalUploadComponent } from '../components/modal-upload/modal-upload.co
     RxjsComponent,
     ProfileComponent,
     UsuariosComponent,
-    ModalUploadComponent
+    ModalUploadComponent,
+    MedicosComponent,
+    HospitalesComponent,
+    MedicoComponent
   ],
   imports: [ CommonModule, SharedModule, PAGES_ROUTES, FormsModule, ChartsModule, PipesModule],
   exports: [
