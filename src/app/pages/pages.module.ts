@@ -25,6 +25,7 @@ import { ModalUploadComponent } from '../components/modal-upload/modal-upload.co
 import { MedicosComponent } from './medicos/medicos.component';
 import { HospitalesComponent } from './hospitales/hospitales.component';
 import { MedicoComponent } from './medico/medico.component';
+import { BusquedaComponent } from './busqueda/busqueda.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { MedicoComponent } from './medico/medico.component';
     ModalUploadComponent,
     MedicosComponent,
     HospitalesComponent,
-    MedicoComponent
+    MedicoComponent,
+    BusquedaComponent
   ],
   imports: [ CommonModule, SharedModule, PAGES_ROUTES, FormsModule, ChartsModule, PipesModule],
   exports: [

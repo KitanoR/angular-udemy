@@ -12,6 +12,7 @@ import {
 } from "./service.index";
 import { HttpClientModule } from '@angular/common/http';
 import { ModalUploadService } from '../components/modal-upload/modal-upload.service';
+import { AdminGuard } from './guards/admin.guard';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ModalUploadService } from '../components/modal-upload/modal-upload.serv
     LoginGuardGuard,
     HospitalesService,
     SubirArchivoService,
-    ModalUploadService
+    ModalUploadService,
+    AdminGuard
   ],
   declarations: []
 })
