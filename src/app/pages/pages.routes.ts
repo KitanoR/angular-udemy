@@ -1,5 +1,4 @@
 import { Routes,  RouterModule } from '@angular/router';
-import { PagesComponent } from './pages.component';
 import { ProgressComponent } from './progress/progress.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { Graficas1Component } from './graficas1/graficas1.component';
@@ -13,14 +12,15 @@ import { MedicosComponent } from './medicos/medicos.component';
 import { HospitalesComponent } from './hospitales/hospitales.component';
 import { MedicoComponent } from './medico/medico.component';
 import { BusquedaComponent } from './busqueda/busqueda.component';
+import { VerficaTokenGuard } from '../services/guards/verfica-token.guard';
 
 const pagesRoutes: Routes = [
-  {
-    path: '',
-    component: PagesComponent,
-    canActivate: [LoginGuardGuard],
-    children: [
-      { path: 'dashboard', component: DashboardComponent, data: {titulo: 'Dashboard'} },
+      { 
+        path: 'dashboard', 
+        canActivate: [VerficaTokenGuard],
+        component: DashboardComponent, 
+        data: {titulo: 'Dashboard'} 
+      },
       { path: 'progress', component: ProgressComponent, data: {titulo: 'ProgressBars'} },
       { path: 'graficas1', component: Graficas1Component, data: {titulo: 'Gráficas'} },
       { path: 'promesas', component: PromesasComponent, data: {titulo: 'Promesas'} },
@@ -37,8 +37,6 @@ const pagesRoutes: Routes = [
       { path: 'medico/:id', component: MedicoComponent, data: {titulo: 'Información médico'} },
       { path: 'hospitales', component: HospitalesComponent, data: {titulo: 'Mantenimiento de Hospitales'} },
       { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
-    ]
-  }
 ];
 
 export const PAGES_ROUTES = RouterModule.forChild(pagesRoutes);

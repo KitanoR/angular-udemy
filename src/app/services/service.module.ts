@@ -8,6 +8,7 @@ import {
   LoginGuardGuard,
   MedicoService,
   HospitalesService,
+  VerficaTokenGuard,
   SubirArchivoService
 } from "./service.index";
 import { HttpClientModule } from '@angular/common/http';
@@ -30,7 +31,8 @@ import { AdminGuard } from './guards/admin.guard';
     HospitalesService,
     SubirArchivoService,
     ModalUploadService,
-    AdminGuard
+    AdminGuard,
+    VerficaTokenGuard
   ],
   declarations: []
 })
